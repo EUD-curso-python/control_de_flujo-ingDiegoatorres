@@ -1,5 +1,3 @@
-
-
 """Guarde en lista `naturales` los primeros 100 números naturales (desde el 1) 
 usando el bucle while
 """
@@ -8,8 +6,6 @@ naturales = list()
 while i <= 100:
   naturales.append(i)
   i = i+1
-
-
 
 """Guarde en `acumulado` una lista con el siguiente patrón:
 
@@ -39,8 +35,7 @@ separados por coma, así:
 """
 tabla100 = ''
 for i in range(1,11,1):
-  if (i>1):
-    tabla100 += ','
+  tabla100 = tabla100 + ','if (i>1) else tabla100      
   tabla100 += str (134 * i) 
 
 """Guardar en `multiplos3` la cantidad de números que son múltiplos de 3 y 
@@ -54,6 +49,7 @@ for numero in (lista1):
     break
   if numero % 3 == 0:
     multiplos3+=1
+    
 
 """Guardar en `regresivo50` una lista con la cuenta regresiva desde el número 
 50 hasta el 1, así:
@@ -94,9 +90,7 @@ for obj in lista2:
 Nota: Un número primo es un número entero que no se puede calcular multiplicando 
 otros números enteros.
 """
-
 def primo(numero):
-  
   for i in range(2,int(numero/2)+1,1):
     if numero % i == 0:
       return False
@@ -157,18 +151,9 @@ for i in range(1,101,1):
 y guardar resultado en variable `suma_2s` 
 """
 suma_2s = 0;
-for i in range(1,11,1):
-  termino = 0
+for i in range(1,11,1):  
   for j in range(0,i,1):
-    termino += (10**(j))*2
-    print ('que belleza', termino, i)
-  
-  print (termino)
-  suma_2s += termino
-
-print (suma_2s)
-
-
+    suma_2s += (10**(j))*2          
 
 """Guardar en un string llamado `patron` el siguiente patrón llegando a una 
 cantidad máxima de asteriscos de 30. 
@@ -197,13 +182,3 @@ for i in range(0,30,1):
   caracteres+= '*'
 
 patron += patron[len(patron)-33::-1]
-
-
-
-
-print(patron)  
-
-
-
-
-
