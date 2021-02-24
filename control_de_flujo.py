@@ -24,19 +24,12 @@ for i in range (1,51,1):
   else:
     acumulado.append(str(i))
 
-
-
-
 """Guarde en `suma100` el entero de la suma de todos los números entre 1 y 100:
 """
 
 suma100 = 0
 for i in range(1,101,1):
   suma100+=i
-
-
-
-
 
 """Guarde en `tabla100` un string con los primeros 10 múltiplos del número 134, 
 separados por coma, así:
@@ -50,9 +43,6 @@ for i in range(1,11,1):
     tabla100 += ','
   tabla100 += str (134 * i) 
 
-
-
-
 """Guardar en `multiplos3` la cantidad de números que son múltiplos de 3 y 
 menores o iguales a 300 en la lista `lista1` que se define a continuación (la lista 
 está ordenada).
@@ -64,10 +54,6 @@ for numero in (lista1):
     break
   if numero % 3 == 0:
     multiplos3+=1
-  
-
-
-
 
 """Guardar en `regresivo50` una lista con la cuenta regresiva desde el número 
 50 hasta el 1, así:
@@ -91,12 +77,6 @@ for veces in range (1,51,1):
     salida += str(numero) + ('' if (numero == 1) else ' ' ) 
   regresivo50.append(salida)
 
-
-
-
-
-
-
 """Invierta la siguiente lista usando el bucle for y guarde el resultado en 
 `invertido` (sin hacer uso de la función `reversed` ni del método `reverse`)
 """
@@ -110,12 +90,10 @@ for obj in lista2:
     invertido.append(obj)
   i+=1
 
-
 """Guardar en `primos` una lista con todos los números primos desde el 37 al 300
 Nota: Un número primo es un número entero que no se puede calcular multiplicando 
 otros números enteros.
 """
-
 
 def primo(numero):
   
@@ -124,16 +102,10 @@ def primo(numero):
       return False
   return True
 
-
 primos = list()
 for numero in range(37,301,1):
   if (primo(numero)):
     primos.append(numero)
-
-
-
-
-
 
 """Guardar en `fibonacci` una lista con los primeros 60 términos de la serie de 
 Fibonacci.
@@ -152,10 +124,6 @@ for numero in range (1,61,1):
   anterior1 = anterior2
   anterior2 = pivot + anterior2
 
-
-
-
-
 """Guardar en `factorial` el factorial de 30
 El factorial (símbolo:!) Significa multiplicar todos los números enteros desde
 el 1 hasta el número elegido.
@@ -168,10 +136,6 @@ factorial =1
 for i in range (30,1,-1):
   factorial*=i
 
-
-
-
-
 """Guarde en lista `pares` los elementos de la siguiente lista que esten 
 presentes en posiciones pares, pero solo hasta la posición 80.
 """
@@ -182,20 +146,12 @@ pares = list()
 for i in range(0,81,2):
   pares.append(lista3[i]);
 
-
-
-
 """Guarde en lista `cubos` el cubo (potencia elevada a la 3) de los números del 
 1 al 100. 
 """
 cubos = list()
 for i in range(1,101,1):
   cubos.append(i * i * i)
-
-
-
-
-
 
 """Encuentre la suma de la serie 2 +22 + 222 + 2222 + .. hasta sumar 10 términos 
 y guardar resultado en variable `suma_2s` 
@@ -235,16 +191,12 @@ cantidad máxima de asteriscos de 30.
 *
 """
 patron = ''
-
 caracteres = '*'
-for i in range(0,30,1):
-  if i>0:
-    patron+='\n'
-  patron+= caracteres 
+for i in range(0,30,1):  
+  patron+= caracteres  +'\n'
   caracteres+= '*'
 
-print ('[' + patron + ']')
-patron += '\n' +  patron[len(patron)-32::-1]
+patron += patron[len(patron)-33::-1]
 
 
 
